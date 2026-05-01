@@ -674,26 +674,247 @@ main, header, footer { position: relative; z-index: 2; }
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-  .card-body {
-    grid-template-columns: 1fr;
-    padding: 28px;
-    gap: 28px;
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .header-inner {
+    padding: 14px 20px;
   }
   .brand h1 {
-    font-size: 1rem;
-    letter-spacing: 1px;
+    font-size: 1.2rem;
+  }
+  .intro {
+    padding: 40px 16px 20px;
   }
   .intro h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
-  .card-header h3 {
-    font-size: 1.5rem;
+  .card-body {
+    padding: 32px;
+    gap: 30px;
+  }
+  .carousel-wrapper {
+    padding: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .bg-grid {
+    background-size: 40px 40px;
+  }
+  .orb {
+    filter: blur(60px);
+    opacity: 0.4;
+  }
+  .orb-1, .orb-2, .orb-3 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .header-inner {
+    padding: 12px 14px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .brand {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+  .flag {
+    font-size: 1.6rem;
+  }
+  .brand h1 {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+  }
+  .subtitle {
+    display: none;
+  }
+  .author {
+    padding: 6px 14px;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+  .author-label {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
   }
   .author-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-top: 0;
   }
+  .lang-toggle {
+    padding: 3px;
+  }
+  .lang-btn {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+  }
+
+  .intro {
+    padding: 36px 16px 16px;
+  }
+  .intro h2 {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+  .intro p {
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+
+  .carousel-wrapper {
+    margin: 16px auto;
+    padding: 12px;
+  }
+  .carousel-track {
+    gap: 16px;
+  }
+  .recipe-card {
+    border-radius: 18px;
+  }
+  .card-header {
+    padding: 32px 18px 28px;
+  }
+  .emoji {
+    font-size: 3.4rem;
+    margin-bottom: 10px;
+  }
+  .card-header h3 {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  .tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    padding: 0 8px;
+  }
+  .card-body {
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+    gap: 24px;
+  }
+  .section h4 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+  .ingredients li, .steps li {
+    font-size: 0.88rem;
+    padding: 9px 12px 9px 34px;
+    margin-bottom: 8px;
+  }
+
+  .carousel-controls {
+    margin-top: 22px;
+    gap: 10px;
+  }
+  .carousel-controls button {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+  .dots {
+    margin-top: 14px;
+    gap: 8px;
+  }
+  .dot {
+    width: 28px;
+    height: 4px;
+  }
+  .dot.active {
+    width: 44px;
+  }
+
+  .site-footer {
+    padding: 36px 16px 24px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .brand h1 {
+    font-size: 0.85rem;
+  }
+  .intro h2 {
+    font-size: 1.4rem;
+  }
+  .intro p {
+    font-size: 0.85rem;
+  }
+  .emoji {
+    font-size: 3rem;
+  }
+  .card-header h3 {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+  }
+  .card-header {
+    padding: 28px 14px 24px;
+  }
+  .card-body {
+    padding: 18px 14px;
+    gap: 20px;
+  }
+  .ingredients li, .steps li {
+    font-size: 0.82rem;
+    padding: 8px 10px 8px 32px;
+    line-height: 1.5;
+  }
+  .ingredients li::before {
+    left: 12px;
+    font-size: 0.65rem;
+  }
+  .steps li::before {
+    left: 8px;
+    font-size: 0.7rem;
+  }
+  .carousel-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .author-label {
+    display: none;
+  }
+  .author {
+    padding: 6px 12px;
+  }
+}
+
+/* Very small / landscape */
+@media (max-width: 360px) {
   .header-inner {
-    padding: 14px 18px;
+    padding: 10px 8px;
+  }
+  .brand h1 {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  .flag {
+    font-size: 1.4rem;
+  }
+  .author-name {
+    font-size: 0.75rem;
+  }
+  .intro h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
